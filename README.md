@@ -4,27 +4,28 @@ Este proyecto es una aplicación web interactiva desarrollada con [Streamlit](ht
 
 ## Características
 
-- Carga interactiva de archivos CSV (`st.file_uploader`).
-- Visualización de imágenes en la tabla.
-- Enlaces de texto clickeables.
-- Visualización de los top 50 resultados directamente en pantalla.
+- Carga automática de `data.csv` en el servidor con `@st.cache_data`.
+- **Vista Normal**: Visualización de catálogo completo en una tabla interactiva con imágenes y enlaces.
+- **Modo Presentación Automática**: Rotación automática de tarjetas de productos, ideal para pantallas de publicidad, con velocidad configurable.
+- Interfaz atractiva y profesional con manejo de datos faltantes.
 
 ## Cómo ejecutar localmente
 
 1. Clona este repositorio o descarga los archivos.
-2. Abre tu terminal e instala las dependencias (se recomienda usar un entorno virtual):
+2. Asegúrate de tener el archivo `data.csv` en la misma carpeta que `app.py`.
+3. Abre tu terminal e instala las dependencias (se recomienda usar un entorno virtual):
    ```bash
    pip install -r requirements.txt
    ```
-3. Ejecuta la aplicación de Streamlit:
+4. Ejecuta la aplicación de Streamlit:
    ```bash
    streamlit run app.py
    ```
-4. Sube tu archivo CSV en la interfaz y visualiza los datos de las ofertas.
+5. Usa la barra lateral para alternar entre la vista normal y el modo de presentación automática.
 
-## Formato del archivo CSV requerido
+## Formato del archivo CSV requerido (`data.csv`)
 
-El archivo subido deberá contar con al menos las siguientes columnas:
+El archivo debe llamarse `data.csv` y contar con al menos las siguientes columnas:
 - `img src`
 - `button href (2)`
 - `text--b`
